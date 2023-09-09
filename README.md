@@ -1,6 +1,6 @@
 # data-platform-api-plant-deletes-rmq-kube
 
-data-platform-api-plant-deletes-rmq-kube は、周辺業務システム　を データ連携基盤 と統合することを目的に、API 輸送契約データに削除フラグを設定するマイクロサービスです。  
+data-platform-api-plant-deletes-rmq-kube は、周辺業務システム　を データ連携基盤 と統合することを目的に、プラントデータに削除フラグを設定するマイクロサービスです。  
 https://xxx.xxx.io/api/API_PLANT_SRV/deletes/
 
 ## 動作環境
@@ -18,13 +18,13 @@ data-platform-api-plant-deletes-rmq-kube において、API への値入力条�
 
 ## データ連携基盤のAPIの選択的コール
 
-Latona および AION の データ連携基盤 関連リソースでは、Inputs フォルダ下の sample.json の accepter に取得したいデータの種別（＝APIの種別）を入力し、指定することができます。  
-なお、同 accepter にAll(もしくは空白)の値を入力することで、全データ（＝全APIの種別）をまとめて取得することができます。  
+Latona および AION の データ連携基盤 関連リソースでは、Inputs フォルダ下の sample.json の accepter に削除フラグ設定したいデータの種別（＝APIの種別）を入力し、指定することができます。  
+なお、同 accepter にAll(もしくは空白)の値を入力することで、全データ（＝全APIの種別）をまとめて削除フラグ設定することができます。  
 
 ## Output  
 本マイクロサービスでは、[golang-logging-library-for-data-platform](https://github.com/latonaio/golang-logging-library-for-data-platform) により、以下のようなデータがJSON形式で出力されます。  
-以下の sample.json の例は 輸送契約 の ヘッダデータ に削除フラグが設定された結果の JSON の例です。  
-以下の項目のうち、"XXXXXXXXXX" ～ "XXXXXXXXXX" は、/DPFM_API_Output_Formatter/type.go 内 の Type Header {} による出力結果です。"cursor" ～ "time"は、golang-logging-library による 定型フォーマットの出力結果です。  
+以下の sample.json の例は プラント の 一般データ に削除フラグが設定された結果の JSON の例です。  
+以下の項目のうち、"Plant" ～ "IsMarkedForDeletion" は、/DPFM_API_Output_Formatter/type.go 内 の Type Header {} による出力結果です。"cursor" ～ "time"は、golang-logging-library による 定型フォーマットの出力結果です。  
 
 ```
 XXXXXXXX

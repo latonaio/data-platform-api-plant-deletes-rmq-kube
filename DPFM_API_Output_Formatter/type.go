@@ -25,7 +25,7 @@ type SDC struct {
 }
 
 type Message struct {
-	General         *General           `json:"General"`
+	General         *[]General         `json:"General"`
 	StorageLocation *[]StorageLocation `json:"StorageLocation"`
 }
 

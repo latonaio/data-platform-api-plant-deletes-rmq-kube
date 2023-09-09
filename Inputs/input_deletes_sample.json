@@ -6,19 +6,15 @@
 	"api_status_code": 200,
 	"runtime_session_id": "boi9ar543dg91ipdnspi099u231280ab0v8af0ew",
 	"business_partner": 201,
-	"service_label": "FREIGHT_AGREEMENT",
+	"service_label": "PLANT",
 	"api_type": "deletes",
-	"FreightAgreement": {
-		"FreightAgreement": null,
-		"IsMarkedForDeletion": null,
-		"Item": {
-			"FreightAgreementItem": null,
-			"IsMarkedForDeletion": null
-			}
+	"Plant": {
+		"BusinessPartner": null,
+		"Plant": "",
+		"IsMarkedForDeletion": null
 	},
-	"api_schema": "DPFMFreightAgreementDeletes",
+	"api_schema": "DPFMPlantDeletes",
 	"accepter": [
-		"FreightAgreement"
-	],
-	"deleted": false
+		"General"
+	]
 }
